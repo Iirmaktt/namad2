@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Layers, Cpu, Atom, Microscope, Settings, Zap, Shield, Wrench, Flame } from 'lucide-react';
 import nawelImg from "@/assets/nawel-cast.jpg";
+import nawelToolImg from "@/assets/nawel-tool.png";
 const Products: React.FC = () => {
 
   const products = [
@@ -28,7 +29,8 @@ const Products: React.FC = () => {
         {
           name: "NAWEL TOOL",
           description: "Dış mekan kaynak işleri için mükemmel",
-          specs: "Çap: 1.2-2.0mm, Rüzgar direnci yüksek"
+          specs: "Çap: 1.2-2.0mm, Rüzgar direnci yüksek",
+          image: nawelToolImg,
         },
         {
           name: "NAWEL CORROSİON",
@@ -266,6 +268,12 @@ const Products: React.FC = () => {
                         key={subIndex}
                         className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300"
                       >
+                          <img 
+                        src={subProduct.image}
+                        alt={subProduct.name}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                        style={{objectFit: 'unset'}}
+                      />
                         <h5 className="text-lg font-semibold text-gray-900 mb-3">
                           {subProduct.name}
                         </h5>
