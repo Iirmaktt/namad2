@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Lightbulb, Users, Award, Target } from 'lucide-react';
+import AnimatedBackground from '../components/AnimatedBackground';
 
 const Home: React.FC = () => {
   const features = [
@@ -44,6 +45,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-black overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-40"></div>
+        <AnimatedBackground />
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{
@@ -51,7 +53,7 @@ const Home: React.FC = () => {
           }}
         ></div>
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent">
@@ -85,7 +87,7 @@ const Home: React.FC = () => {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full p-1">
             <div className="w-2 h-3 bg-white/50 rounded-full mx-auto animate-pulse"></div>
           </div>
